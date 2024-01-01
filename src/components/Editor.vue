@@ -134,7 +134,7 @@
 <template>
     <div>
         <div class="editor" ref="editor"></div>
-        <div 
+        <div
             v-if="debugSyntaxTree"
             v-html="syntaxTreeDebugContent"
             class="debug-syntax-tree"

@@ -72,22 +72,22 @@
                 <nav class="sidebar">
                     <h1>Settings</h1>
                     <ul>
-                        <TabListItem 
-                            name="General" 
-                            tab="general" 
-                            :activeTab="activeTab" 
+                        <TabListItem
+                            name="General"
+                            tab="general"
+                            :activeTab="activeTab"
                             @click="activeTab = 'general'"
                         />
-                        <TabListItem 
-                            name="Appearance" 
+                        <TabListItem
+                            name="Appearance"
                             tab="appearance"
-                            :activeTab="activeTab" 
+                            :activeTab="activeTab"
                             @click="activeTab = 'appearance'"
                         />
-                        <TabListItem 
-                            name="Updates" 
-                            tab="updates" 
-                            :activeTab="activeTab" 
+                        <TabListItem
+                            name="Updates"
+                            tab="updates"
+                            :activeTab="activeTab"
                             @click="activeTab = 'updates'"
                         />
                     </ul>
@@ -115,15 +115,15 @@
                             <div class="entry">
                                 <h2>Global Keyboard Shortcut</h2>
                                 <label class="keyboard-shortcut-label">
-                                    <input 
-                                        type="checkbox" 
-                                        v-model="enableGlobalHotkey" 
+                                    <input
+                                        type="checkbox"
+                                        v-model="enableGlobalHotkey"
                                         @change="updateSettings"
                                     />
                                     Enable Global Hotkey
                                 </label>
-                                
-                                <KeyboardHotkey 
+
+                                <KeyboardHotkey
                                     :disabled="!enableGlobalHotkey"
                                     v-model="globalHotkey"
                                     @change="updateSettings"
@@ -137,18 +137,18 @@
                             <div class="entry">
                                 <h2>Gutters</h2>
                                 <label>
-                                    <input 
-                                        type="checkbox" 
-                                        v-model="showLineNumberGutter" 
+                                    <input
+                                        type="checkbox"
+                                        v-model="showLineNumberGutter"
                                         @change="updateSettings"
                                     />
                                     Show line numbers
                                 </label>
-                                
+
                                 <label>
-                                    <input 
-                                        type="checkbox" 
-                                        v-model="showFoldGutter" 
+                                    <input
+                                        type="checkbox"
+                                        v-model="showFoldGutter"
                                         @change="updateSettings"
                                     />
                                     Show fold gutter
@@ -156,15 +156,15 @@
                             </div>
                         </div>
                     </TabContent>
-                    
+
                     <TabContent tab="updates" :activeTab="activeTab">
                         <div class="row">
                             <div class="entry">
                                 <h2>Auto Update</h2>
                                 <label>
-                                    <input 
-                                        type="checkbox" 
-                                        v-model="autoUpdate" 
+                                    <input
+                                        type="checkbox"
+                                        v-model="autoUpdate"
                                         @change="updateSettings"
                                     />
                                     Periodically check for new updates
@@ -175,9 +175,9 @@
                             <div class="entry">
                                 <h2>Beta Versions</h2>
                                 <label>
-                                    <input 
-                                        type="checkbox" 
-                                        v-model="allowBetaVersions" 
+                                    <input
+                                        type="checkbox"
+                                        v-model="allowBetaVersions"
                                         @change="updateSettings"
                                     />
                                     Use beta versions of Heynote
@@ -187,9 +187,9 @@
                     </TabContent>
                 </div>
             </div>
-            
+
             <div class="bottom-bar">
-                <button 
+                <button
                     @click="$emit('closeSettings')"
                     class="close"
                 >Close</button>
@@ -215,7 +215,7 @@
             bottom: 0
             right: 0
             background: rgba(0, 0, 0, 0.5)
-        
+
         .dialog
             box-sizing: border-box
             z-index: 2

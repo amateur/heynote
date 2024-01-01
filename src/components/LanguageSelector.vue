@@ -3,7 +3,7 @@
 
     const items = LANGUAGES.map(l => {
         return {
-            "token": l.token, 
+            "token": l.token,
             "name": l.name
         }
     }).sort((a, b) => {
@@ -42,7 +42,7 @@
                     } else {
                         this.$refs.item[this.selected].scrollIntoView({block: "nearest"})
                     }
-                    
+
                 } else if (event.key === "ArrowUp") {
                     this.selected = Math.max(this.selected - 1, 0)
                     event.preventDefault()
@@ -82,8 +82,8 @@
 <template>
     <div class="scroller">
         <form class="language-selector" tabindex="-1" @focusout="onFocusOut" ref="container">
-            <input 
-                type="text" 
+            <input
+                type="text"
                 ref="input"
                 @keydown="onKeydown"
                 @input="onInput"
@@ -104,7 +104,7 @@
     </div>
 </template>
 
-<style scoped lang="sass">    
+<style scoped lang="sass">
     .scroller
         overflow: auto
         position: fixed
@@ -124,7 +124,7 @@
         border-radius: 0 0 5px 5px
         box-shadow: 0 0 10px rgba(0,0,0,0.3)
         +dark-mode
-            background: #151516
+            background: #11111b
             box-shadow: 0 0 10px rgba(0,0,0,0.5)
         input
             background: #fff
@@ -137,13 +137,12 @@
             &:focus
                 outline: none
                 border: 1px solid #fff
-                outline: 2px solid #48b57e
+                // outline: 2px solid #48b57e
             +dark-mode
-                background: #3b3b3b
-                border: 1px solid #5a5a5a
+                background: #1e1e2e
+                border: 1px solid #313244
                 &:focus
-                    border: 1px solid #3b3b3b
-        
+                    border: 1px solid #cba6f7
         .items
             > li
                 border-radius: 3px
@@ -155,10 +154,10 @@
                     background: #48b57e
                     color: #fff
                 +dark-mode
-                    color: rgba(255,255,255, 0.53)
+                    color: #cdd6f4
                     &:hover
-                        background: #29292a
+                        background: #45475A
                     &.selected
-                        background: #1b6540
-                        color: rgba(255,255,255, 0.87)
+                        background: #2F2F41
+                        color: rgb(203, 166, 247)
 </style>

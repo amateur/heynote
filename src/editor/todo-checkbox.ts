@@ -20,7 +20,7 @@ class CheckboxWidget extends WidgetType {
         box.type = "checkbox"
         box.checked = this.checked
         box.style.position = "absolute"
-        box.style.top = "-3px"
+        box.style.top = "-1px"
         box.style.left = "0"
         return wrap
     }
@@ -45,7 +45,7 @@ function checkboxes(view: EditorView) {
                         }
                     }
                 }
-                
+
                 if (nodeRef.name == "TaskMarker") {
                     // the Markdown parser creates a TaskMarker for "- [x]", but we don't want to replace it with a
                     // checkbox widget, unless its followed by a space

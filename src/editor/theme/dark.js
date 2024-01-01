@@ -5,30 +5,31 @@ import { tags } from '@lezer/highlight';
 
 // Colors from https://www.nordtheme.com/docs/colors-and-palettes
 // Polar Night
-const base00 = '#2e3440', // black
-base01 = '#3b4252', // dark grey
-base02 = '#434c5e', base03 = '#4c566a'; // grey
+const base00 = 'rgb(17, 17, 27)', // black
+base01 = 'rgb(49, 50, 68)', // dark grey
+base02 = 'rgb(69, 71, 90)', base03 = 'rgb(88, 91, 112)'; // grey
 // Snow Storm
-const base04 = '#d8dee9', // grey
+const base04 = '#cdd6f4', // grey
 base05 = '#e5e9f0', // off white
 base06 = '#eceff4'; // white
 // Frost
-const base07 = '#8fbcbb', // moss green
-base08 = '#88c0d0', // ice blue
+const base07 = 'rgb(205, 214, 244)', // white
+base08 = 'rgb(137, 180, 250)', // ice blue
 base09 = '#81a1c1', // water blue
-base0A = '#5e81ac'; // deep blue
+base0A = 'rgb(203, 166, 247)'; // mauve
 // Aurora
-const base0b = '#bf616a', // red
-base0C = '#d08770', // orange
-base0D = '#ebcb8b', // yellow
-base0E = '#a3be8c', // green
-base0F = '#b48ead'; // purple
+const base0b = 'rgb(243, 139, 168)', // red
+base0C = 'rgb(250, 179, 135)', // orange
+base0D = 'rgb(249, 226, 175)', // yellow
+base0E = 'rgb(166, 227, 161)', // green
+base0F = 'rgb(203, 166, 247)'; // purple
 const invalid = '#d30102', darkBackground = '#252a33', background = '#1e222a', tooltipBackground = base01, cursor = '#fff';
 const highlightBackground = 'rgba(255,255,255,0.04)';
 
 const lineNumberColor = 'rgba(255,255,255, 0.15)';
 const commentColor = '#888d97';
 const matchingBracket = 'rgba(255,255,255,0.1)';
+// const selection = "#0865a9aa";
 const selection = "#0865a9aa";
 const selectionBlur = "#225377aa";
 
@@ -52,7 +53,7 @@ const darkTheme = EditorView.theme({
         "background-color": selection,
     },
     '.cm-panels': {
-        backgroundColor: "#474747", 
+        backgroundColor: "#474747",
         color: "#9c9c9c",
     },
     ".cm-panels .cm-panel": {
@@ -76,7 +77,7 @@ const darkTheme = EditorView.theme({
         color: "rgba(255,255,255, 0.8)",
     },
     '.cm-panels.cm-panels-top': { borderBottom: '2px solid black' },
-    
+
     '.cm-searchMatch': {
         backgroundColor: 'transparent',
         outline: `1px solid ${base07}`
@@ -135,16 +136,15 @@ const darkTheme = EditorView.theme({
         }
     },
     ".heynote-blocks-layer .block-even": {
-        background: "#252B37",
+        background: "#313244",
         borderTop: "1px solid #1e222a",
     },
     ".heynote-blocks-layer .block-odd": {
-        //background: "#222f38",
-        background: "#213644",
+        background: "#1e1e2e",
         borderTop: "1px solid #1e222a",
     },
     ".heynote-math-result .inner": {
-        background: "#0e1217",
+        background: "#11111b",
         color: "#a0e7c7",
         boxShadow: '0 0 3px rgba(0,0,0, 0.3)',
     },
@@ -189,7 +189,7 @@ const darkHighlightStyle = HighlightStyle.define([
     },
     {
         tag: [tags.tagName],
-        color: base0F
+        color: base0b //test
     },
     {
         tag: [tags.squareBracket],

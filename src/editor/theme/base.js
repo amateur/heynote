@@ -59,7 +59,7 @@ export const heynoteBase = EditorView.theme({
         paddingTop: 4,
     },
     '.cm-scroller': {
-        fontFamily: "Hack, Menlo, Monaco, 'Courier New', monospace",
+        fontFamily: "'iA Writer Mono S', Hack, Menlo, Monaco, 'Courier New', monospace",
     },
     '.cm-gutters': {
         padding: '0 2px 0 4px',
@@ -76,8 +76,8 @@ export const heynoteBase = EditorView.theme({
         opacity: 1,
     },
     '.cm-cursor, .cm-dropCursor': {
-        borderLeftWidth:'2px', 
-        height:'19px !important', 
+        borderLeftWidth:'2px',
+        height:'19px !important',
         marginTop:'-2px !important'
     },
     '.heynote-blocks-layer': {
